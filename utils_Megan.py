@@ -11,9 +11,12 @@ A short, first-week module to demonstrate key skills:
 - run this file as a script via main() using the if __name__ == '__main__' pattern
 
 Author: Megan Chastain
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
 
 
 #####################################
@@ -58,31 +61,42 @@ logger.info("Logger loaded.")
 is_accepting_clients: bool = True
 offers_remote_workshops: bool = True
 
+is_hiring: bool = False
 
 # ----------------------------------
 # Define Integer variables
 # ----------------------------------
 current_year: int = 2025
 year_started: int = 2020
+<<<<<<< HEAD
 is_hiring: bool = False
+=======
+>>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
 number_of_employees: int = 25
 
 # ----------------------------------
 # Define String variables
 # ----------------------------------
+<<<<<<< HEAD
 author: str = "Megan Chastain"  # 
 organization: str = "Spondiferous Analytics"  # 
 motto: str = "Embrace the Unplanned."  #  
 
 
 location str = "Columbia, Mo"
+=======
+author: str = "Megan Chastain"  
+organization: str = "Spondiferous Analytics"  
+motto: str = "Embrace the Unplanned."  
+
+>>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
 
 # ----------------------------------
 # Define List variables
 # ----------------------------------
 # example list of strings
 services: list[str] = ["Data Analysis", "Machine Learning", "Business Intelligence"]
-
+location: list[str] = [Columbia, Missouri]
 # example list of floating point numbers
 satisfaction_scores: list[float] = [4.8, 4.6, 4.9, 5.0, 4.7]
 
