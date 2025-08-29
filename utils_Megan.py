@@ -1,5 +1,5 @@
 """
-File: utils_case.py
+File: utils_Megan.py
 
 Purpose: Reusable header/tagline module for analytics projects.
 
@@ -10,12 +10,8 @@ A short, first-week module to demonstrate key skills:
 - expose a function named get_tagline() that can be imported into other modules
 - run this file as a script via main() using the if __name__ == '__main__' pattern
 
-Author: Denise Case
+Author: Megan Chastain
 
-TODO: Replace 'lastname' in the filename with your own last (or unique) name.
-TODO: Update the file name and author in this opening docstring.
-TODO: Remove each TODO line AFTER you successfully complete the item.
-"""
 
 #####################################
 # Import Modules
@@ -58,32 +54,29 @@ logger.info("Logger loaded.")
 # ----------------------------------
 is_accepting_clients: bool = True
 offers_remote_workshops: bool = True
-
-# TODO: Declare and initialize a new boolean variable (e.g. `is_hiring` and set it to False)
+is_hiring: bool = False
 
 # ----------------------------------
 # Define Integer variables
 # ----------------------------------
 current_year: int = 2025
 year_started: int = 2020
-
-# TODO: Declare and initialize a new integer variable (e.g. `number_of_employees` and set it to 25)
+number_of_employees: int = 25
 
 # ----------------------------------
 # Define String variables
 # ----------------------------------
-author: str = "Denise Case"  # TODO: change to your name
-organization: str = "Stellar Analytics"  # TODO: change the org name
-motto: str = "Clear. Useful. On time."  # TODO: change the motto
+author: str = "Megan Chastain"  
+organization: str = "Spondiferous Analytics"  
+motto: str = "Embrace the Unplanned."  
 
-# TODO: Declare and initialize a new string variable (e.g. `location` and set it to your city and state)
 
 # ----------------------------------
 # Define List variables
 # ----------------------------------
 # example list of strings
 services: list[str] = ["Data Analysis", "Machine Learning", "Business Intelligence"]
-
+location: list[str] = [Columbia, Missouri]
 # example list of floating point numbers
 satisfaction_scores: list[float] = [4.8, 4.6, 4.9, 5.0, 4.7]
 
