@@ -1,5 +1,5 @@
 """
-File: utils_case.py
+File: utils_Megan.py
 
 Purpose: Reusable header/tagline module for analytics projects.
 
@@ -10,12 +10,11 @@ A short, first-week module to demonstrate key skills:
 - expose a function named get_tagline() that can be imported into other modules
 - run this file as a script via main() using the if __name__ == '__main__' pattern
 
-Author: Denise Case
+Author: Megan Chastain
 
-TODO: Replace 'lastname' in the filename with your own last (or unique) name.
-TODO: Update the file name and author in this opening docstring.
-TODO: Remove each TODO line AFTER you successfully complete the item.
-"""
+
+
+
 
 #####################################
 # Import Modules
@@ -59,24 +58,24 @@ logger.info("Logger loaded.")
 is_accepting_clients: bool = True
 offers_remote_workshops: bool = True
 
-# TODO: Declare and initialize a new boolean variable (e.g. `is_hiring` and set it to False)
 
 # ----------------------------------
 # Define Integer variables
 # ----------------------------------
 current_year: int = 2025
 year_started: int = 2020
-
-# TODO: Declare and initialize a new integer variable (e.g. `number_of_employees` and set it to 25)
+is_hiring: bool = False
+number_of_employees: int = 25
 
 # ----------------------------------
 # Define String variables
 # ----------------------------------
-author: str = "Denise Case"  # TODO: change to your name
-organization: str = "Stellar Analytics"  # TODO: change the org name
-motto: str = "Clear. Useful. On time."  # TODO: change the motto
+author: str = "Megan Chastain"  # 
+organization: str = "Spondiferous Analytics"  # 
+motto: str = "Embrace the Unplanned."  #  
 
-# TODO: Declare and initialize a new string variable (e.g. `location` and set it to your city and state)
+
+location str = "Columbia, Mo"
 
 # ----------------------------------
 # Define List variables
@@ -87,9 +86,8 @@ services: list[str] = ["Data Analysis", "Machine Learning", "Business Intelligen
 # example list of floating point numbers
 satisfaction_scores: list[float] = [4.8, 4.6, 4.9, 5.0, 4.7]
 
+office_locations: list(str) = ["Salem, Maine", Beloit, Wisconsin", "Seattle, Washington"]
 
-# TODO: Declare and initialize a new list variable (e.g. `office_locations` and set it to 3-5 cities where your org has offices)
-# TODO: Wrap each string in quotes and separate each item with a comma.
 
 # ----------------------------------
 # Use built-in Python operators (such as - + * /)
@@ -101,8 +99,8 @@ max_score: float = max(satisfaction_scores)
 count_of_services: int = len(services)
 count_of_scores: int = len(satisfaction_scores)
 
-# TODO: Declare and initialize a new calculated variable (e.g. `count_of_locations` that uses the len() function on your list of office locations)
 
+count_of_locations: int = len(office_locations)
 
 # ----------------------------------
 # Use the built-in statistics module functions (such as mean, stdev, etc.)
@@ -113,16 +111,20 @@ stdev_score: float = statistics.stdev(satisfaction_scores)
 # ----------------------------------
 # Compose a reusable formatted string (f-string) using triple quotes
 # ----------------------------------
-byline: str = f"""
+byline: str = f{office_locations}.}
 **********************************************************
 {organization} — Project Header
 **********************************************************
 Author:                     {author}
 Motto:                      {motto}
 Years Active:               {years_active}
+location:                  {location}
 Accepting New Clients?:     {is_accepting_clients}
 Remote Workshops?:          {offers_remote_workshops}
 Services:                   {services}
+Office Locations:         {office_locations}
+Number of Employees:        {number_of_employees}
+Is Hiring?:                 {is_hiring}
 Client Satisfaction Scores: {satisfaction_scores}
 Minimum Satisfaction Score: {min_score}
 Maximum Satisfaction Score: {max_score}
@@ -131,7 +133,7 @@ Mean Satisfaction Score:    {mean_score:.2f}
 **********************************************************
 """
 
-# TODO: Modify the byline f-string to display your new variables as well. Use curly braces {} to embed each variable.
+
 
 #####################################
 # Define Global Functions
@@ -170,8 +172,7 @@ def main() -> None:
     loguru.logger.info("Byline:\n" + get_byline())
 
     try:
-        # TODO: Uncomment next line if you want audio feedback (use CTRL+C to stop)
-        # read_byline_aloud()
+        read_byline_aloud()
         pass
     except KeyboardInterrupt:
         logger.info("Speech interrupted by user (Ctrl+C).")
