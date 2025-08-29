@@ -11,13 +11,11 @@ A short, first-week module to demonstrate key skills:
 - run this file as a script via main() using the if __name__ == '__main__' pattern
 
 Author: Megan Chastain
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
-
+TOD
+"""
 
 #####################################
 # Import Modules
@@ -60,47 +58,36 @@ logger.info("Logger loaded.")
 # ----------------------------------
 is_accepting_clients: bool = True
 offers_remote_workshops: bool = True
-
 is_hiring: bool = False
+
 
 # ----------------------------------
 # Define Integer variables
 # ----------------------------------
 current_year: int = 2025
 year_started: int = 2020
-<<<<<<< HEAD
-is_hiring: bool = False
-=======
->>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
 number_of_employees: int = 25
+
 
 # ----------------------------------
 # Define String variables
 # ----------------------------------
-<<<<<<< HEAD
-author: str = "Megan Chastain"  # 
-organization: str = "Spondiferous Analytics"  # 
-motto: str = "Embrace the Unplanned."  #  
-
-
-location str = "Columbia, Mo"
-=======
 author: str = "Megan Chastain"  
 organization: str = "Spondiferous Analytics"  
 motto: str = "Embrace the Unplanned."  
+location: str = "Columbia, Missouri"
 
->>>>>>> 70aaae82fe9dd16560597a3cf413ea3f96f3faba
 
 # ----------------------------------
 # Define List variables
 # ----------------------------------
 # example list of strings
 services: list[str] = ["Data Analysis", "Machine Learning", "Business Intelligence"]
-location: list[str] = [Columbia, Missouri]
+
 # example list of floating point numbers
 satisfaction_scores: list[float] = [4.8, 4.6, 4.9, 5.0, 4.7]
+office_locations: list[str] = ["Salem, Maine", "Beloit, Wisconsin", "Seattle, Washington"]
 
-office_locations: list(str) = ["Salem, Maine", Beloit, Wisconsin", "Seattle, Washington"]
 
 
 # ----------------------------------
@@ -112,9 +99,9 @@ min_score: float = min(satisfaction_scores)
 max_score: float = max(satisfaction_scores)
 count_of_services: int = len(services)
 count_of_scores: int = len(satisfaction_scores)
-
-
 count_of_locations: int = len(office_locations)
+
+
 
 # ----------------------------------
 # Use the built-in statistics module functions (such as mean, stdev, etc.)
@@ -125,20 +112,19 @@ stdev_score: float = statistics.stdev(satisfaction_scores)
 # ----------------------------------
 # Compose a reusable formatted string (f-string) using triple quotes
 # ----------------------------------
-byline: str = f{office_locations}.}
+byline: str = f"""
 **********************************************************
 {organization} — Project Header
 **********************************************************
 Author:                     {author}
 Motto:                      {motto}
 Years Active:               {years_active}
-location:                  {location}
+Location:                  {location}
+Office Locations:           {office_locations} (Total: {count_of_locations})
+Number of Employees:        {number_of_employees}
 Accepting New Clients?:     {is_accepting_clients}
 Remote Workshops?:          {offers_remote_workshops}
 Services:                   {services}
-Office Locations:         {office_locations}
-Number of Employees:        {number_of_employees}
-Is Hiring?:                 {is_hiring}
 Client Satisfaction Scores: {satisfaction_scores}
 Minimum Satisfaction Score: {min_score}
 Maximum Satisfaction Score: {max_score}
@@ -147,7 +133,7 @@ Mean Satisfaction Score:    {mean_score:.2f}
 **********************************************************
 """
 
-
+# TODO: Modify the byline f-string to display your new variables as well. Use curly braces {} to embed each variable.
 
 #####################################
 # Define Global Functions
@@ -186,7 +172,8 @@ def main() -> None:
     loguru.logger.info("Byline:\n" + get_byline())
 
     try:
-        read_byline_aloud()
+        
+        # read_byline_aloud()
         pass
     except KeyboardInterrupt:
         logger.info("Speech interrupted by user (Ctrl+C).")
